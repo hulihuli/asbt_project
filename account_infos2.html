@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>账号信息</title>
+		<link rel="stylesheet" type="text/css" href="libs/css/basic.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="libs/js/framework.js"></script>
+
+		<script type="text/javascript" src="libs/js/form/tui_date/WdatePicker.js"></script>
+		<script type="text/javascript" src="libs/js/nav/tui_page.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+
+				//page
+				laypage({
+					cont: document.getElementById('page'), //容器。值支持id名、原生dom对象，jquery对象
+					skin: '#3399ff',
+					pages: 66, //总页数
+					curr: 6, //初始化当前页
+					skip: true,
+					jump: function(e) {} //触发分页后的回调
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="wrap cl">
+			<!--left content-->
+			<div class="left_menu f_l">
+				<ul class="menu_list">
+					<li class="left_con">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">展开/收起</a>
+						</div>
+					</li>
+					<li class="evaluation_results current">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">测评报告</a>
+						</div>
+					</li>
+					<li class="send_evaluation">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">发送测评</a>
+						</div>
+					</li>
+					<li class="account_authority">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">账号管理</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--right content-->
+			<div class="right">
+				<!--right header-->
+				<div class="right_header">
+					<div class="header_title"><img src="images/logo.png" alt="" /></div>
+					<ul class="header_info f_r cl">
+						<li class="approve_serve">
+							<a href="javascript:void(0)">支持与服务</a>
+						</li>
+						<li class="user_info">
+							<a href="javascript:void(0)"><img src="images/user_img.jpg" alt="" /></a>
+							<div class="dropdown">
+								<div class="triangle"></div>
+								<div class="info_list">
+									<ul>
+										<li>上海颀讯智能科技有限公司</li>
+										<li>方林</li>
+										<li>admin</li>
+										<li>15156282006</li>
+									</ul>
+									<div class="exit">
+										<a href="javascript:void(0)">退 出</a>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+
+				<!--Bread crumb navigation-->
+				<div class="bread_nav">
+					<a href="javascript:void(0)">账号管理</a>
+					<span class="split">/</span>
+					<a href="javascript:void(0)">账号信息</a>
+				</div>
+
+				<div class="right_main">
+					<div class="right_content add_user_right">
+						<table class="table table_infos account_infos">
+                            <tr>
+                                <th width="10%">企业名称：</th>
+                                <td width="23%">上海颀讯智能科技有限公司</td>
+                            </tr>
+                            <tr>
+                                <th>用户名：</th>
+                                <td>admin</td>
+                            </tr>
+                            <tr>
+                                <th>联系人姓名：</th>
+                                <td>张斌</td>
+                            </tr>
+                            <tr>
+                                <th>联系人电话：</th>
+                                <td>
+                                    <span>15126532568</span>
+                                    <a href="javascript:void(0)" class="btn btn_change_pwd ml_20">修改手机号</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>密码：</th>
+                                <td>
+                                    <span>**************</span>
+                                    <a href="javascript:void(0)" class="btn btn_change_pwd ml_20">修改密码</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>最近登录时间：</th>
+                                <td>2018-09-08  09:00 </td>
+                            </tr>
+                        </table>
+
+						<div class="align_center right_footer_btns">
+                            <a href="###" class="btn btn_return">返回</a>
+                        </div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

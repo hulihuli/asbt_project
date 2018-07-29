@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>企业详情</title>
+    <link rel="stylesheet" type="text/css" href="libs/css/basic.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="libs/js/framework.js"></script>
+    <!--表单验证-->
+    <script type="text/javascript" src="libs/js/form/Validform_v5.3.2.js"></script>
+    <!--表单验证结束-->
+
+    <script type="text/javascript" src="js/main.js"></script>
+
+</head>
+
+<body>
+<div class="wrap cl">
+    <!--left content-->
+    <div class="left_menu f_l">
+        <ul class="menu_list">
+            <li class="left_con">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">展开/收起</a>
+                </div>
+            </li>
+            <li class="company_list current">
+                <a href="company_list.html"></a>
+                <div>
+                    <a href="company_list.html">企业列表</a>
+                </div>
+            </li>
+            <li class="order_management">
+                <a href="order_list.html"></a>
+                <div>
+                    <a href="order_list.html">订单管理</a>
+                </div>
+            </li>
+            <li class="evaluation_results">
+                <a href="evaluation_list.html"></a>
+                <div>
+                    <a href="evaluation_list.html">测评结果</a>
+                </div>
+            </li>
+            <li class="user_management">
+                <a href="operation_user_list.html"></a>
+                <div>
+                    <a href="operation_user_list.html">用户管理</a>
+                </div>
+            </li>
+            <li class="send_mail">
+                <a href="send_mail.html"></a>
+                <div>
+                    <a href="send_mail.html">发送邮件</a>
+                </div>
+            </li>
+            <li class="account_authority">
+                <a href="account_infos.html"></a>
+                <div>
+                    <a href="account_infos.html">账号与权限</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="menu_list_open">
+            <li class="left_con">
+                <a href="javascript:void(0)"></a>
+            </li>
+            <li class="company_list current">
+                <a href="company_list.html">企业列表</a>
+            </li>
+            <li class="order_management">
+                <a href="order_list.html">订单管理</a>
+            </li>
+            <li class="evaluation_results">
+                <a href="evaluation_list.html">测评结果</a>
+            </li>
+            <li class="user_management">
+                <a href="operation_user_list.html">用户管理</a>
+            </li>
+            <li class="send_mail">
+                <a href="send_mail.html">发送邮件</a>
+            </li>
+            <li class="account_authority">
+                <a href="account_infos.html">账号与权限</a>
+            </li>
+        </ul>
+    </div>
+    <!--right content-->
+    <div class="right">
+        <!--right header-->
+        <div class="right_header">
+            <div class="header_title"><img src="images/logo.png" alt=""/></div>
+            <ul class="header_info f_r cl">
+                <li class="approve_serve">
+                    <a href="javascript:void(0)">支持与服务</a>
+                </li>
+                <li class="user_info">
+                    <a href="javascript:void(0)"><img src="images/user_img.jpg" alt=""/></a>
+                    <div class="dropdown">
+                        <div class="triangle"></div>
+                        <div class="info_list">
+                            <ul>
+                                <li>上海颀讯智能科技有限公司</li>
+                                <li>方林</li>
+                                <li>admin</li>
+                                <li>15156282006</li>
+                            </ul>
+                            <div class="exit">
+                                <a href="javascript:void(0)">退 出</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <!--Bread crumb navigation-->
+        <div class="bread_nav">
+            <a href="javascript:void(0)">企业管理</a>
+            <span class="split">/</span>
+            <a href="javascript:void(0)">企业详情</a>
+        </div>
+
+        <div class="right_main">
+            <div class="detail_item">
+                <div class="title">
+                    <span class="company_name">上海颀讯智能科技有限公司</span>
+                    <span class="company_number">编号：QX10987654</span>
+                    <a href="edit_company.html" class="btn btn_edit"></a>
+                </div>
+                <table class="table table_infos">
+                    <tr>
+                        <th width="10%">联系人姓名：</th>
+                        <td width="23%">方林</td>
+                        <th width="10%">企业性质：</th>
+                        <td width="23%">国有企业</td>
+                        <th width="10%">企业简称：</th>
+                        <td>颀讯智能</td>
+                    </tr>
+                    <tr>
+                        <th>联系人电话：</th>
+                        <td>13822252226</td>
+                        <th>企业规模：</th>
+                        <td>500~1000人</td>
+                        <th>创建时间：</th>
+                        <td>2018-02-07</td>
+                    </tr>
+                    <tr>
+                        <th>联系人邮箱：</th>
+                        <td>487456@163.com</td>
+                        <th>公司地址：</th>
+                        <td>上海市静安区</td>
+                        <th>企业类型：</th>
+                        <td>制造业</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="detail_item">
+                <div class="title">
+                    <span class="post">岗位</span>
+                    <a href="add_post.html" class="btn btn_add"></a>
+                </div>
+                <div class="table_box">
+                    <div class="table_title cl">
+                        <div class="f_l">中级物流工程师</div>
+                        <div class="f_r"><a href="edit_post.html">再次购买</a></div>
+                    </div>
+                    <table class="table table_border table_bordered">
+                        <tr>
+                            <td>购买方式</td>
+                            <td>订单号</td>
+                            <td>剩余次数</td>
+                            <td>已测次数</td>
+                            <td>待测次数</td>
+                            <td>购买次数</td>
+                            <td>课程形式</td>
+                            <td>购买时间</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">数量/次</td>
+                            <td>xs21512054565</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                        <tr>
+                            <td>xs21512054565</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                        <tr class="total" onclick="window.location = 'post_details.html'">
+                            <td>总计</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">时间</td>
+                            <td>订单号</td>
+                            <td>剩余次数</td>
+                            <td>已测次数</td>
+                            <td>待测次数</td>
+                            <td>截止日期</td>
+                            <td>课程形式</td>
+                            <td>购买时间</td>
+                        </tr>
+                        <tr>
+                            <td>xs21512054565</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>2018-08-09</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="table_box">
+                    <div class="table_title cl">
+                        <div class="f_l">中级物流工程师</div>
+                        <div class="f_r"><a href="javascript:void(0)">再次购买</a></div>
+                    </div>
+                    <table class="table table_border table_bordered">
+                        <tr>
+                            <td>购买方式</td>
+                            <td>订单号</td>
+                            <td>剩余次数</td>
+                            <td>已测次数</td>
+                            <td>待测次数</td>
+                            <td>购买次数</td>
+                            <td>课程形式</td>
+                            <td>购买时间</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">数量/次</td>
+                            <td>xs21512054565</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                        <tr>
+                            <td>xs21512054565</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                        <tr class="total">
+                            <td>总计</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>15</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">时间</td>
+                            <td>订单号</td>
+                            <td>剩余次数</td>
+                            <td>已测次数</td>
+                            <td>待测次数</td>
+                            <td>截止日期</td>
+                            <td>课程形式</td>
+                            <td>购买时间</td>
+                        </tr>
+                        <tr>
+                            <td>xs21512054565</td>
+                            <td>5</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>2018-08-09</td>
+                            <td>测评</td>
+                            <td>2018-02-07 13:14</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="detail_item">
+                <div class="title">
+                    <span class="post">系统用户</span>
+                    <a href="add_system_users.html" class="btn btn_add"></a>
+                </div>
+                <div class="table_box">
+                    <table class="table table_border table_bordered table_striped">
+                        <tr class="bg">
+                            <th>序号</th>
+                            <th>用户名</th>
+                            <th>联系人姓名</th>
+                            <th>联系人电话</th>
+                            <th>创建时间</th>
+                            <th class="tools">操作</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>admin</td>
+                            <td>张琳</td>
+                            <td>15156282006</td>
+                            <td>2018-02-07</td>
+                            <td class="tools">
+                                <a href="system_user_details.html">查看详情</a>
+                                |
+                                <a href="edit_system_users.html">编辑</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>admin</td>
+                            <td>张琳</td>
+                            <td>15156282006</td>
+                            <td>2018-02-07</td>
+                            <td class="tools">
+                                <a href="system_user_details.html">查看详情</a>
+                                |
+                                <a href="edit_system_users.html">编辑</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>admin</td>
+                            <td>张琳</td>
+                            <td>15156282006</td>
+                            <td>2018-02-07</td>
+                            <td class="tools">
+                                <a href="system_user_details.html">查看详情</a>
+                                |
+                                <a href="edit_system_users.html">编辑</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="align_center mb_15">
+                <a href="company_list.html" class="btn btn_watch">返回</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

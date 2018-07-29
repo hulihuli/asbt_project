@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>批量发送测评</title>
+		<link rel="stylesheet" type="text/css" href="libs/css/basic.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="libs/js/framework.js"></script>
+
+		<script type="text/javascript" src="libs/js/form/tui_date/WdatePicker.js"></script>
+		<script type="text/javascript" src="libs/js/nav/tui_page.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<!--表单验证-->
+		<script type="text/javascript" src="libs/js/form/Validform_v5.3.2.js"></script>
+		<!--表单验证结束-->
+
+
+		<script type="text/javascript">
+			$(function(){
+				//表单验证
+				$("#demoform2").Validform({
+				 	tiptype:2
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="wrap cl">
+			<!--left content-->
+			<div class="left_menu f_l">
+				<ul class="menu_list">
+					<li class="left_con">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">展开/收起</a>
+						</div>
+					</li>
+					<li class="evaluation_results current">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">测评报告</a>
+						</div>
+					</li>
+					<li class="send_evaluation">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">发送测评</a>
+						</div>
+					</li>
+					<li class="account_authority">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">账号管理</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--right content-->
+			<div class="right">
+				<!--right header-->
+				<div class="right_header">
+					<div class="header_title"><img src="images/logo.png" alt="" /></div>
+					<ul class="header_info f_r cl">
+						<li class="approve_serve">
+							<a href="javascript:void(0)">支持与服务</a>
+						</li>
+						<li class="user_info">
+							<a href="javascript:void(0)"><img src="images/user_img.jpg" alt="" /></a>
+							<div class="dropdown">
+								<div class="triangle"></div>
+								<div class="info_list">
+									<ul>
+										<li>上海颀讯智能科技有限公司</li>
+										<li>方林</li>
+										<li>admin</li>
+										<li>15156282006</li>
+									</ul>
+									<div class="exit">
+										<a href="javascript:void(0)">退 出</a>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+
+				<!--Bread crumb navigation-->
+				<div class="bread_nav">
+					<a href="javascript:void(0)">企业管理</a>
+					<span class="split">/</span>
+					<a href="javascript:void(0)">批量发送测评</a>
+				</div>
+
+				<div class="right_main">
+					<div class="right_content add_user_right">
+						<form action="" class="form form_horizontal add_form" id="demoform2">
+							<table class="table table_input">
+                                <tr>
+                                    <td width="10%">有效期：</td>
+                                    <td width="40%">
+                                        <span class="select_box">
+                                            <select class="select" datatype="*">
+                                                <option value="">请选择</option>
+                                                <option value="1">1天</option>
+                                                <option value="2"  selected="selected">2天</option>
+                                                <option value="3">3天</option>
+                                                 <option value="5">5天</option>
+                                                 <option value="7">7天</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>岗位：</td>
+                                    <td>
+                                        <span class="select_box">
+                                            <select class="select" datatype="*">
+                                                <option value="">请选择</option>
+                                                <option value="1">经理</option>
+                                                <option value="2"  selected="selected">工程师</option>
+                                            </select>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>用户信息：</td>
+                                    <td>
+                                        <a href="javascript:void(0)" class="btn btn_upload mr_15">更改附件</a>
+                                        <a href="javascript:void(0)" class="btn btn_download">下载模板</a>
+                                        <div class="upload_info">
+                                            物流管理课程第二期学员信息表.xlsc
+                                            <table class="table table_infos table_border table_bordered table_striped">
+                                                <tr class="bg">
+                                                    <th>序号</th>
+                                                    <th>姓名</th>
+                                                    <th>性别</th>
+                                                    <th>手机号</th>
+                                                    <th>岗位</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>张琳</td>
+                                                    <td>男</td>
+                                                    <td>15156282006</td>
+                                                    <td>物流工程师</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                     <td>张琳</td>
+                                                    <td>男</td>
+                                                    <td>15156282006</td>
+                                                    <td>物流工程师</td>
+                                                 </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>张琳</td>
+                                                    <td>男</td>
+                                                    <td>15156282006</td>
+                                                    <td>物流工程师</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+							</table>
+                            <div class="tip">温馨提示：确认后以短信方式将激活码发到用户手机</div>
+							<div class="spacehold"></div>
+							<div class="fixed-btn align_center">
+								<a href="###" class="btn btn_save">确认</a>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

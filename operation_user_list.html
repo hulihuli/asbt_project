@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>操作用户列表</title>
+		<link rel="stylesheet" type="text/css" href="libs/css/basic.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="libs/js/framework.js"></script>
+
+		<script type="text/javascript" src="libs/js/form/tui_date/WdatePicker.js"></script>
+		<script type="text/javascript" src="libs/js/nav/tui_page.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+
+				//page
+				laypage({
+					cont: document.getElementById('page'), //容器。值支持id名、原生dom对象，jquery对象
+					skin: '#3399ff',
+					pages: 66, //总页数
+					curr: 6, //初始化当前页
+					skip: true,
+					jump: function(e) {} //触发分页后的回调
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="wrap cl">
+			<!--left content-->
+			<div class="left_menu f_l">
+				<ul class="menu_list">
+					<li class="left_con">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">展开/收起</a>
+						</div>
+					</li>
+					<li class="company_list">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">企业列表</a>
+						</div>
+					</li>
+					<li class="order_management current">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">订单管理</a>
+						</div>
+					</li>
+					<li class="evaluation_results">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">测评结果</a>
+						</div>
+					</li>
+					<li class="user_management">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">用户管理</a>
+						</div>
+					</li>
+					<li class="send_mail">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">发送邮件</a>
+						</div>
+					</li>
+					<li class="account_authority">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">账号与权限</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--right content-->
+			<div class="right">
+				<!--right header-->
+				<div class="right_header">
+					<div class="header_title"><img src="images/logo.png" alt="" /></div>
+					<ul class="header_info f_r cl">
+						<li class="approve_serve">
+							<a href="javascript:void(0)">支持与服务</a>
+						</li>
+						<li class="user_info">
+							<a href="javascript:void(0)"><img src="images/user_img.jpg" alt="" /></a>
+							<div class="dropdown">
+								<div class="triangle"></div>
+								<div class="info_list">
+									<ul>
+										<li>上海颀讯智能科技有限公司</li>
+										<li>方林</li>
+										<li>admin</li>
+										<li>15156282006</li>
+									</ul>
+									<div class="exit">
+										<a href="javascript:void(0)">退 出</a>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+
+				<!--Bread crumb navigation-->
+				<div class="bread_nav">
+					<a href="javascript:void(0)">用户管理</a>
+					<span class="split">/</span>
+					<a href="javascript:void(0)">操作用户列表</a>
+				</div>
+
+				<div class="right_main">
+					<div class="right_content company_list_right">
+						<div class="title_container cl">
+							<span class="info f_l">操作用户列表</span>
+							<div class="f_r">
+								<a href="javascript:void(0)" class="btn btn_export"></a>
+							</div>
+						</div>
+						<!--search conditions-->
+						<div class="search_condition">
+							<div class="search cl">
+								<div class="label f_l">搜索</div>
+								<div class="search_infos f_l cl">
+									<div class="f_l noselect">姓名</div>
+									<input class="input_search" type="text" />
+									<i class="icon_search"></i>
+								</div>
+							</div>
+							<div class="screen cl">
+								<div class="label f_l">筛选</div>
+								<div class="screen_infos">
+									<div class="model-select-box">
+										<div class="model-select-text" data-value="">性别</div>
+										<ul class="model-select-option">
+											<li data-option="1">男</li>
+											<li data-option="2">女</li>
+										</ul>
+									</div>
+								</div>
+								<div class="screen_infos">
+									<div class="label f_l">创建时间:</div>
+									<input class="tui_datepicker input_text" onclick="WdatePicker()" placeholder="年/月/日" type="text"> 至
+									<input class="tui_datepicker input_text" onclick="WdatePicker()" placeholder="年/月/日" type="text">
+								</div>
+								<div class="screen_infos">
+									<a class="btn btn_screen" href="javascript:void(0)"></a>
+								</div>
+							</div>
+						</div>
+						<table class="table table_border table_striped table_hover table_fixed">
+							<tr>
+								<th width="60">序号</th>
+								<th>姓名</th>
+								<th>性别</th>
+								<th>手机号</th>
+								<th>创建时间</th>
+							</tr>
+							<tr>
+								<td>1</td>
+                                <td>张斌</td>
+                                <td>男</td>
+								<td>15122222222</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>张斌</td>
+                                <td>男</td>
+								<td>15122222222</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>张斌</td>
+                                <td>男</td>
+								<td>15122222222</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr>
+								<td>4</td>
+								<td>张斌</td>
+                                <td>男</td>
+								<td>15122222222</td>
+								<td>2018-09-06</td>
+							</tr>
+						</table>
+
+						<div class="footer cl">
+							<div id="page" class="f_r"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

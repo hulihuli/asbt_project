@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>新增岗位</title>
+    <link rel="stylesheet" type="text/css" href="libs/css/basic.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="libs/js/framework.js"></script>
+    <!--表单验证-->
+    <script type="text/javascript" src="libs/js/form/Validform_v5.3.2.js"></script>
+    <!--表单验证结束-->
+
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript">
+        $(function(){
+            $(".all_course").height($("#add_course").height());
+            //表单验证
+            $("#add_course").Validform({
+                tiptype:2
+            });
+
+            $(".icon_tips").mouseover(function(){
+                $(this).addClass("current");
+                $(this).siblings(".tips_content").show();
+            }).mouseout(function(){
+                $(this).removeClass("current");
+                $(this).siblings(".tips_content").hide();
+            });
+
+            $(".buy_way .btn").click(function(){
+                var index = $(this).index();
+                $(this).addClass("current");
+                $(this).siblings().removeClass("current");
+                $(this).parents(".detail_info").find(".info_text").eq(index).addClass("current");
+                $(this).parents(".detail_info").find(".info_text").eq(index).siblings().removeClass("current");
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+<div class="wrap cl">
+    <!--left content-->
+    <div class="left_menu f_l">
+        <ul class="menu_list">
+            <li class="left_con">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">展开/收起</a>
+                </div>
+            </li>
+            <li class="company_list current">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">企业列表</a>
+                </div>
+            </li>
+            <li class="order_management">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">订单管理</a>
+                </div>
+            </li>
+            <li class="evaluation_results">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">测评结果</a>
+                </div>
+            </li>
+            <li class="user_management">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">用户管理</a>
+                </div>
+            </li>
+            <li class="send_mail">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">发送邮件</a>
+                </div>
+            </li>
+            <li class="account_authority">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">账号与权限</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--right content-->
+    <div class="right">
+        <!--right header-->
+        <div class="right_header">
+            <div class="header_title"><img src="images/logo.png" alt=""/></div>
+            <ul class="header_info f_r cl">
+                <li class="approve_serve">
+                    <a href="javascript:void(0)">支持与服务</a>
+                </li>
+                <li class="user_info">
+                    <a href="javascript:void(0)"><img src="images/user_img.jpg" alt=""/></a>
+                    <div class="dropdown">
+                        <div class="triangle"></div>
+                        <div class="info_list">
+                            <ul>
+                                <li>上海颀讯智能科技有限公司</li>
+                                <li>方林</li>
+                                <li>admin</li>
+                                <li>15156282006</li>
+                            </ul>
+                            <div class="exit">
+                                <a href="javascript:void(0)">退 出</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <!--Bread crumb navigation-->
+        <div class="bread_nav">
+            <a href="javascript:void(0)">企业管理</a>
+            <span class="split">/</span>
+            <a href="javascript:void(0)">新增岗位</a>
+        </div>
+
+        <div class="right_main">
+            <div class="right_content add_post_right">
+                <div class="cl">
+                    <div class="f_l">
+                        <div class="all_course">
+                            <div class="title">所有课程 <span>(选择需要课程和任务)</span></div>
+                            <div class="course_item">
+                                <div class="course_name cl">
+                                    <div class="f_l">
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course1" value="ABB机器人" type="checkbox" checked="checked">
+                                        <label for="course1" class="hand checkbox_self_type">物流管理</label>
+                                    </div>
+                                    <div class="tips f_l">
+                                        <i class="icon_tips"></i>
+                                        <div class="tips_content">
+                                            <div class="left_triangle f_l"></div>
+                                            <div class="text f_l">物流管理是一种管理哲学。</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="course_list cl">
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course1_item1" value="任务1"
+                                               type="checkbox" checked="checked">
+                                        <label for="course1_item1" class="hand checkbox_self_type">任务1</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course1_item2" value="任务2"
+                                               type="checkbox" checked="checked">
+                                        <label for="course1_item2" class="hand checkbox_self_type">任务2</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course1_item3" value="任务3"
+                                               type="checkbox" checked="checked">
+                                        <label for="course1_item3" class="hand checkbox_self_type">任务3</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course1_item4" value="任务4"
+                                               type="checkbox" checked="checked">
+                                        <label for="course1_item4" class="hand checkbox_self_type">任务4</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="course_item">
+                                 <div class="course_name cl">
+                                    <div class="f_l">
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course2" value="ABB机器人" type="checkbox" checked="checked">
+                                        <label for="course2" class="hand checkbox_self_type">精益生产</label>
+                                    </div>
+                                    <div class="tips f_l">
+                                        <i class="icon_tips"></i>
+                                        <div class="tips_content">
+                                            <div class="left_triangle f_l"></div>
+                                            <div class="text f_l">精益生产精益生产精益生产精益生产方式的一种管理哲学。</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="course_list cl">
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course2_item1" value="任务1"
+                                               type="checkbox" checked="checked">
+                                        <label for="course2_item1" class="hand checkbox_self_type">任务1</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course2_item2" value="任务2"
+                                               type="checkbox" >
+                                        <label for="course2_item2" class="hand checkbox_self_type">任务2</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course2_item3" value="任务3"
+                                               type="checkbox" checked="checked">
+                                        <label for="course2_item3" class="hand checkbox_self_type">任务3</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course2_item4" value="任务4"
+                                               type="checkbox" >
+                                        <label for="course2_item4" class="hand checkbox_self_type">任务4</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="course_item">
+                                <div class="course_name cl">
+                                    <div class="f_l">
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course3" value="ABB机器人" type="checkbox" checked="checked">
+                                        <label for="course3" class="hand checkbox_self_type">安全生产</label>
+                                    </div>
+                                    <div class="tips f_l">
+                                        <i class="icon_tips"></i>
+                                        <div class="tips_content">
+                                            <div class="left_triangle f_l"></div>
+                                            <div class="text f_l">安全生产，是衍生自丰田生产方式的一种管理哲学。</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="course_list cl">
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course3_item1" value="任务1"
+                                               type="checkbox" checked="checked">
+                                        <label for="course3_item1" class="hand checkbox_self_type">任务1</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course3_item2" value="任务2"
+                                               type="checkbox">
+                                        <label for="course3_item2" class="hand checkbox_self_type">任务2</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course3_item3" value="任务3"
+                                               type="checkbox">
+                                        <label for="course3_item3" class="hand checkbox_self_type">任务3</label>
+                                    </li>
+                                    <li>
+                                        <input class="checkbox_self_type" truetype="checkbox" id="course3_item4" value="任务4"
+                                               type="checkbox">
+                                        <label for="course3_item4" class="hand checkbox_self_type">任务4</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f_l">
+                    <form action="" class="form form_horizontal course_detail" id="add_course">
+                        <div class="buy_detail">
+                            <ul>
+                                <li class="cl">
+                                    <label class="detail_name f_l"><span class="necessary">*</span>岗位名称：</label>
+                                    <div class="detail_info f_l">
+                                        <div class="formControls">
+                                              <input  class="input_text radius" type="text" datatype="*" nullmsg="请输入联系人姓名"  placeholder="请填写岗位名称">
+                                        </div>
+                                        <div><span class="Validform_checktip"></span></div>
+                                    </div>
+                                </li>
+                                <li class="cl">
+                                    <label class="detail_name f_l"><span class="necessary">*</span>购买方式：</label>
+                                    <div class="detail_info f_l">
+                                        <div class="buy_way">
+                                            <a class="btn btn_quality current" href="javascript:void(0)">数量/次</a>
+                                            <a class="btn btn_time" href="javascript:void(0)">时间</a>
+                                        </div>
+                                        <div class="buy_way_info">
+                                            <div class="info_text current">
+                                                <div class="formControls">
+                                                  <input  class="input_text radius input_quality" type="text" datatype="*" nullmsg="请填写购买次数"  placeholder="请填写购买次数">
+                                                </div>
+                                                <div><span class="Validform_checktip"></span></div>
+                                            </div>
+                                            <div class="info_text">
+                                                <div class="formControls">
+                                                  <input  class="input_text radius input_time" type="text" datatype="*" nullmsg="请填写购买时间"  placeholder="请填写购买时间">
+                                                </div>
+                                                <div><span class="Validform_checktip"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="cl">
+                                    <label class="detail_name f_l"><span class="necessary">*</span>课程内容：</label>
+                                    <div class="detail_info f_l">
+                                        <div class="formControls">
+                                              <textarea  class="textarea radius"  datatype="*" nullmsg="请输入课程和任务"  placeholder="请从左侧选择课程和任务"></textarea>
+                                        </div>
+                                        <div><span class="Validform_checktip"></span></div>
+                                    </div>
+                                </li>
+                                <li class="cl">
+                                    <label class="detail_name f_l"><span class="necessary">*</span>课程形式：</label>
+                                    <div class="detail_info f_l">
+                                        <div class="formControls">
+                                            <ul class="course_form cl">
+                                                <li>
+                                                    <input class="checkbox_self_type" true="" name="course_form" id="course_form1" value="教学"
+                                                           type="checkbox" datatype="*" nullmsg="课程形式不能为空">
+                                                    <label for="course_form1" class="hand checkbox_self_type">教学</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_self_type" true="" name="course_form" id="course_form2" value="测评"
+                                                           type="checkbox" datatype="*" nullmsg="课程形式不能为空">
+                                                    <label for="course_form2" class="hand checkbox_self_type">测评</label>
+                                                </li>
+                                                <li>
+                                                    <input class="checkbox_self_type" true="" name="course_form" id="course_form3" value="练习"
+                                                           type="checkbox" datatype="*" nullmsg="课程形式不能为空">
+                                                    <label for="course_form3" class="hand checkbox_self_type">练习</label>
+                                                </li>
+                                            </ul>
+                                            <div><span class="Validform_checktip"></span></div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="message_content">
+                            <div class="title">短信内容</div>
+                            <div class="message_detail">
+                                <div class="cl">
+                                    <label>(***)，您好，</label>
+                                    <input  class="input_text radius" type="text"   placeholder="请填写企业名称">
+                                </div>
+                                <div class="cl">
+                                    <label>邀请您参与，</label>
+                                    <input class="input_text radius" type="text"   placeholder="请填写测评岗位或课程名">
+                                </div>
+                                <div>能力测评，测评工具下载地址为www.wiscaf.com,邀请码为（****），有效期为（****）</div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+                <div class="spacehold"></div>
+                <div class="fixed-btn align_center">
+                    <a href="###" class="btn btn_save disable">保存</a>
+                    <a href="###" class="btn btn_next">下一步</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>l>

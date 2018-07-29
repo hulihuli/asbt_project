@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>测评报告</title>
+    <link rel="stylesheet" type="text/css" href="libs/css/basic.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="libs/js/framework.js"></script>
+
+    <script type="text/javascript" src="libs/js/form/tui_date/WdatePicker.js"></script>
+    <script type="text/javascript" src="libs/js/nav/tui_page.js"></script>
+
+    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/evalution_charts.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+
+            //page
+            laypage({
+                cont: document.getElementById('page'), //容器。值支持id名、原生dom对象，jquery对象
+                skin: '#3399ff',
+                pages: 66, //总页数
+                curr: 6, //初始化当前页
+                skip: true,
+                jump: function (e) {
+                } //触发分页后的回调
+            });
+        })
+    </script>
+</head>
+
+<body>
+<div class="wrap cl">
+    <!--left content-->
+    <div class="left_menu f_l">
+        <ul class="menu_list">
+            <li class="left_con">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">展开/收起</a>
+                </div>
+            </li>
+            <li class="evaluation_results current">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">测评报告</a>
+                </div>
+            </li>
+            <li class="send_evaluation">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">发送测评</a>
+                </div>
+            </li>
+            <li class="account_authority">
+                <a href="javascript:void(0)"></a>
+                <div>
+                    <a href="javascript:void(0)">账号管理</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--right content-->
+    <div class="right">
+        <!--right header-->
+        <div class="right_header">
+            <div class="header_title"><img src="images/logo.png" alt=""/></div>
+            <ul class="header_info f_r cl">
+                <li class="approve_serve">
+                    <a href="javascript:void(0)">支持与服务</a>
+                </li>
+                <li class="user_info">
+                    <a href="javascript:void(0)"><img src="images/user_img.jpg" alt=""/></a>
+                    <div class="dropdown">
+                        <div class="triangle"></div>
+                        <div class="info_list">
+                            <ul>
+                                <li>上海颀讯智能科技有限公司</li>
+                                <li>方林</li>
+                                <li>admin</li>
+                                <li>15156282006</li>
+                            </ul>
+                            <div class="exit">
+                                <a href="javascript:void(0)">退 出</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <!--Bread crumb navigation-->
+        <div class="bread_nav">
+            <a href="javascript:void(0)">测评报告</a>
+        </div>
+
+        <div class="right_main">
+            <div class="detail_item">
+                <div class="title">
+                    <span class="company_name">张林中级物流工程师岗位能力测评报告</span>
+                    <span class="company_number">ID：QX10987654</span>
+                </div>
+                <table class="table table_infos">
+                    <tr>
+                        <th width="10%">测评者：</th>
+                        <td width="23%">方林</td>
+                        <th width="10%">面试岗位：</th>
+                        <td width="23%">物流工程师</td>
+                        <th width="10%">性别：</th>
+                        <td>男</td>
+                    </tr>
+                    <tr>
+                        <th>测评时间：</th>
+                        <td>2018-02-07 19:00</td>
+                        <th>联系人电话：</th>
+                        <td>13822252226</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="report_item cl">
+                <div class="item_left f_l">
+                    <div class="matching_degree">
+                        <div class="title">匹配度</div>
+                        <div class="describe">方林与初级设备工程师匹配程度较高，这表明如果让他从事此工作，他胜任可能性较高，但是在面对一些复杂情况时，他的表现可能不够稳定，需要加以关注。
+                        </div>
+                        <div class="number_data">
+                            <span class="matching_number">98%</span>
+                            <img class="f_r" src="images/matching_img.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="item_right f_r">
+                    <div class="completion_situation">
+                        <div id="chart1"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="report_item cl">
+                <div class="item_left f_l">
+                    <div class="total">
+                        <div class="total_score">90分</div>
+                        <div id="chart2"></div>
+                    </div>
+                </div>
+                <div class="item_right f_r">
+                    <div class="task">
+                        <div id="chart3"></div>
+                    </div>
+                    <div class="table_box">
+                        <div class="table_title cl">
+                            <div>测评明细</div>
+                        </div>
+                        <table class="table table_border table_bordered">
+                            <tr>
+                                <td>序号</td>
+                                <td>任务</td>
+                                <td>测评点</td>
+                                <td>扣分</td>
+                                <td>说明</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td rowspan="3">ABB机器人润滑</td>
+                                <td>润滑脂是回答</td>
+                                <td>-1</td>
+                                <td>少答一个点</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>润滑脂是回答</td>
+                                <td>-1</td>
+                                <td>少答一个点</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>润滑脂是回答</td>
+                                <td>-1</td>
+                                <td>少答一个点</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td rowspan="3">VSM</td>
+                                <td>润滑脂是回答</td>
+                                <td>-1</td>
+                                <td>少答一个点</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>润滑脂是回答</td>
+                                <td>-1</td>
+                                <td>少答一个点</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>润滑脂是回答</td>
+                                <td>-1</td>
+                                <td>少答一个点</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="report_item">
+                <div class="ability cl">
+                    <div class="ability_chart f_l">
+                        <div id="chart4"></div>
+                    </div>
+                    <div class="f_r analysis">
+                        <div class="title">分析</div>
+                        <div class="analysis_content">
+                            这个岗位所需的最高的行为特质是支配性，是以权威为导向的，候选人需要满足符合以下行为特质: 自我驱动力和决断力都比较强，在自己认为是重要的领域时要有明确的目标和很强的竞争精神，并且愿意承担可预期的风险。对自己或者 团队成员的要求高。能很好地面对困难与挑战，会长期坚持关注技术和复杂问题。在承担领导职责时注重把握大局。工作时，专注于任务 的完成，注重实现底线结果。要求做事快节奏，反应速度快。喜欢在不同的领域里进行比较广泛的学习，而不是针对某一个具体的领域， 除非是工作岗位要求的。沟流畅的，喜欢与人交往互动。积极乐观，让人感到放松，具有影响力和说服力。倡导以“头脑风暴”的方式 做决策。愿意培训、培育他人获得职业发展。独立自由，关注远景和大方向。不拘泥于小节，但需要关注那些满足工作要求的节。
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

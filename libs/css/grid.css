@@ -1,0 +1,1018 @@
+/* DataGrid*/
+
+.tui_gird_mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display1: none;
+	font-size: 1px;
+	*zoom: 1;
+	overflow: hidden;
+	display: none;
+	z-index: 9000;
+}
+
+.tui_grid_panel {
+	border: 1px solid #ddd;
+	position: relative;
+	text-align: left;
+}
+
+.tui_grid_panel table {
+	width: auto;
+}
+
+.tui_grid_panel table,
+.tui_grid_panel td {
+	margin: 0;
+	padding: 0;
+}
+
+.tui_panel-btn {
+	display: block;
+	height: 22px;
+	overflow: hidden;
+	line-height: 22px;
+	position: relative;
+	padding-left: 15px;
+	padding-right: 15px;
+	cursor: pointer;
+	text-align: center;
+	color: #2C4D79;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.tui_panel_header {
+	font-size: 14px;
+	font-weight: bold;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #99BBE8;
+	position: relative;
+}
+
+.tui_panel_header_hasicon {
+	padding-left: 13px;
+}
+
+.tui_panel_header img {
+	position: absolute;
+	left: 6px;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	border: 0px;
+}
+
+.tui_panel_header_text {
+	line-height: 22px;
+	padding-left: 10px;
+}
+
+.tui_panel_body {}
+
+.tui_panel_body .tui_gird {}
+
+
+/*表格整体*/
+
+.tui_gird {
+	position: relative;
+	text-align: left;
+	background: #ffffff;
+}
+
+.tui_gird td div {}
+
+.tui_gird table {
+	border-spacing: 0 0;
+}
+
+
+/*表格头部*/
+
+.tui_gird_header {
+	border-bottom: 1px solid #c5dbf0;
+	height: 32px;
+	line-height: 120%!important;
+	background: #F5FAFE;
+	overflow: hidden;
+	width: 100%;
+}
+
+.tui_gird_header-multi {
+	background-image: none!important;
+}
+
+.tui_gird_hd-cell {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	border-right: 1px solid #ddd;
+	text-align: center;
+}
+
+
+/*表格身体*/
+
+.tui_gird_body {
+	position: relative;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	overflow: auto;
+}
+
+
+/*单元格边框色*/
+
+.tui_gird_row-cell {
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+
+.tui_gird_row-last .tui_gird_row-cell {
+	border-bottom: none;
+}
+
+.tui_gird_row-cell-last {}
+
+
+/*表格行背景色*/
+
+.tui_gird_row {
+	background: #ffffff;
+	/*行背景色*/
+}
+
+.tui_gird_row-last {}
+
+.tui_gird_row-alt {
+	background: #f4f7fa;
+	/*间隔背景色*/
+}
+
+.tui_gird_row-over .tui_gird_row-cell,
+.tui_gird_row-over {
+	background: #eaf6fc;
+	/*鼠标移入后背景色*/
+}
+
+.l-selected .tui_gird_row-cell,
+.l-selected {
+	background: #d9ebf5;
+	/*点击后背景色*/
+	background-repeat: repeat-x;
+}
+
+
+/*分页栏背景和边框*/
+
+.tui_panel_bar {
+	height: 34px;
+	background: #ffffff;
+	overflow: hidden;
+	border-top: 1px solid #ddd;
+	margin-top: 2px;
+}
+
+.tui_panel_bar_page {
+	margin-top: 3px;
+}
+
+
+/*工具条*/
+
+.l-toolbar {
+	background: #dfeeff;
+	height: 25px;
+	border-bottom: 1px solid #9CBAE7;
+	padding-top: 4px;
+	padding-bottom: 2px
+}
+
+.l-toolbar-item {
+	float: left;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+.l-toolbar-item-right {
+	float: right;
+	margin-right: 4px;
+}
+
+.l-toolbar-item .l-toolbar-item img {
+	position: absolute;
+	left: 2px;
+	top: 2px;
+	display: block;
+}
+
+.l-toolbar-item img {
+	width: 16px;
+	height: 16px;
+	border: 0px;
+}
+
+.l-icon {}
+
+.l-toolbar-item.tui_panel_btn-over .btn:hover {
+	border-color: #cccccc;
+	color: #ff6600;
+}
+
+.l-toolbar-item .btn {
+	background: transparent;
+	border-color: #dfeeff;
+	color: #1d7ad9;
+}
+
+.tui_gird_scroller {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	height: 220px;
+	overflow: auto;
+}
+
+.tui_gird_scroller-noscroll {
+	height: auto;
+	overflow: hidden;
+}
+
+.tui_gird_body-table {}
+
+.tui_gird_body-table tr.l-checked td {
+	background: #DCF8A8
+}
+
+.tui_gird_popup {
+	background: #eee url(../images/dataGrid/popup-line.gif) repeat-y -1px top;
+	border: 1px solid #ccc;
+	border-top: 0px;
+	overflow: auto;
+	left: 0px;
+	position: absolute;
+	z-index: 999;
+	display: none;
+}
+
+.tui_gird_loading {
+	position: absolute;
+	z-index: 91000;
+	border: 1px solid #9BBBE6;
+	top: 40%;
+	left: 50%;
+	background: white url(../images/dataGrid/loading.gif) no-repeat 8px 6px;
+	padding-left: 38px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	margin-left: -60px;
+	display: none;
+}
+
+.tui_gird_editor {
+	position: absolute;
+	z-index: 999;
+	display: none;
+	text-align: center;
+}
+
+.tui_gird_editor .l-checkbox-wrapper {
+	margin-top: 2px;
+}
+
+.tui_gird_popup table {
+	display: table;
+	border-collapse: separate;
+	border-color: gray;
+	margin: 2px;
+}
+
+.tui_gird_popup table tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+.tui_gird_popup table td {
+	padding: 2px 3px;
+	cursor: default;
+}
+
+.tui_gird_popup td.l-column-left {
+	border-right: 1px solid #ccc;
+}
+
+.tui_gird_popup td.l-column-right {
+	border-left: 1px solid #fff;
+	padding-right: 10px;
+}
+
+.tui_gird_popup tr:hover .l-column-right,
+.tui_gird_popup tr.l-popup-row-over .l-column-right {
+	border-right: 1px solid #d2e3ec;
+	border-top: 1px solid #d2e3ec;
+	border-bottom: 1px solid #d2e3ec;
+}
+
+.tui_gird_popup tr:hover .l-column-left,
+.tui_gird_popup tr.l-popup-row-over .l-column-left {
+	border-left: 1px solid #d2e3ec;
+	border-top: 1px solid #d2e3ec;
+	border-bottom: 1px solid #d2e3ec;
+}
+
+.tui_gird_popup table tr:hover,
+.tui_gird_popup table tr.l-popup-row-over {
+	background: #d5effc url(../images/dataGrid/popup-row-over.gif) repeat-x top;
+	border: 1px solid #a8d8eb;
+}
+
+.tui_gird_hd-cell-mul {
+	border-bottom: 1px solid #cccccc;
+	background: #e9f4fa;
+}
+
+.tui_gird_hd-cell-detail {
+	padding: 0;
+	margin: 0;
+}
+
+.tui_gird_hd-cell-inner {
+	text-align: center;
+}
+
+.tui_gird_dragging-line {
+	background: #EC4262;
+	width: 1px;
+	position: absolute;
+	display: none;
+	z-index: 9999;
+	padding: 0;
+	margin: 0;
+}
+
+.tui_gird_hd-cell-dropleft {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	display: block;
+	background: url(../images/dataGrid/icon-prev.gif) no-repeat -2px center;
+	width: 16px;
+	height: 24px;
+	z-index: 3;
+	display: none;
+}
+
+.tui_gird_hd-cell-dropright {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	display: block;
+	background: url(../images/dataGrid/icon-next.gif) no-repeat 0px center;
+	width: 16px;
+	height: 24px;
+	z-index: 3;
+	display: none;
+}
+
+.tui_gird_hd-cell-drop {
+	position: absolute;
+	right: -1px;
+	top: 0px;
+	display: block;
+	width: 2px;
+	height: 24px;
+	z-index: 3;
+	cursor: e-resize;
+}
+
+.tui_gird_hd-cell-sort {
+	overflow: hidden;
+}
+
+.tui_gird_hd-cell-sort-asc {
+	background: url(../images/dataGrid/icon-sort-asc.gif) no-repeat center;
+}
+
+.tui_gird_hd-cell-sort-desc {
+	background: url(../images/dataGrid/icon-sort-desc.gif) no-repeat center;
+}
+
+.tui_gird_hd-cell-btn {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	overflow: hidden;
+	border-left: 1px solid #C1D6F0;
+	cursor: pointer;
+}
+
+.tui_gird_hd-cell-btn span {
+	border-left: 1px solid #F1F5FC;
+	width: 14px;
+	height: 22px;
+	background: url(../images/dataGrid/icon-down.gif) no-repeat 2px 8px;
+	display: block;
+}
+
+.tui_gird_hd-cell-drophandle {
+	width: 5px;
+	height: 22px;
+	cursor: col-resize;
+	float: right;
+	position: absolute;
+	top: 0px;
+	right: -3px;
+}
+
+.tui_gird_hd-cell-text {
+	text-align: center;
+}
+
+.tui_gird_hd-cell-last {}
+
+.tui_gird_hd-cell-over,
+.tui_gird_hd-cell-on {}
+
+.tui_gird_totalsummary {
+	border-bottom: 1px solid #A3C0E8;
+	background: #EEF3FF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.tui_gird_totalsummary-nobottom {
+	border-bottom: none;
+}
+
+.tui_gird_totalsummary td {
+	border-right: 1px solid #EEF3FF;
+	text-align: center;
+	line-height: 23px;
+}
+
+.tui_gird_totalsummary .tui_gird_totalsummary-cell-last {
+	border-right: 1px solid #A3C0E8;
+}
+
+.tui_gird_totalsummary .tui_gird_totalsummary-cell-inner {
+	margin-left: 3px;
+	margin-right: 3px;
+	min-height: 23px;
+	_height: 23px;
+}
+
+.tui_gird_totalsummary .tui_gird_totalsummary-cell-inner div {
+	height: 22px;
+	line-height: 22px;
+}
+
+
+/*
+    detail
+*/
+
+.tui_gird_detailpanel {}
+
+.tui_gird_detailpanel td {
+	border-right: 1px solid #A3C0E8;
+	border-bottom: 1px solid #A3C0E8;
+}
+
+.tui_gird_detailpanel-inner {
+	margin-bottom: 2px;
+}
+
+.tui_gird_row-cell-detail .tui_gird_row-cell-inner {
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 27px;
+	overflow: hidden;
+}
+
+.tui_gird_row-cell-detail .tui_gird_row-cell-inner span {
+	display: block;
+	width: 21px;
+	height: 32px;
+	background: url(../images/dataGrid/grid-detail-close.gif) no-repeat 10px 10px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.tui_gird_row-cell-detail .tui_gird_row-cell-inner span.l-open {
+	background: url(../images/dataGrid/grid-detail-open.gif) no-repeat 10px 10px;
+}
+
+.tui_gird_row-cell-checkbox .tui_gird_row-cell-inner {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.tui_gird_row-cell-checkbox span,
+.tui_gird_hd-cell-checkbox .tui_gird_hd-cell-inner span {
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: url(../images/dataGrid/checkbox.png) no-repeat;
+	background-position: 0px 0px;
+	cursor: pointer;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.tui_gird_hd-cell-con-checkbox {
+	padding-top: 8px;
+}
+
+.tui_gird_row-cell-con-checkbox {
+	padding-top: 8px;
+}
+
+.l-checked .tui_gird_row-cell-checkbox span,
+.l-checked .tui_gird_hd-cell-checkbox .tui_gird_hd-cell-inner span {
+	background-position: 0px 0px;
+	background-image: url(../images/dataGrid/checkbox-checked.png);
+}
+
+.l-selected .tui_gird_row-cell-checkbox span,
+.l-selected .tui_gird_hd-cell-checkbox .tui_gird_hd-cell-inner span {
+	background-position: 0px 0px;
+	background-image: url(../images/dataGrid/checkbox-checked.png);
+}
+
+.tui_gird_hd-cell-checkbox {
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+.tui_gird_row-cell-edited .tui_gird_row-cell-inner {
+	background-image: url(../images/dataGrid/icon-edited.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 2px;
+	text-indent: 10px;
+}
+
+.tui_gird_row-cell-inner {
+	text-align: center;
+	line-height: 35px;
+	min-height: 35px;
+	_height: 35px;
+	margin-left: 3px;
+	margin-right: 3px;
+	overflow: hidden;
+}
+
+.tui_gird_row-cell-inner-fixedheight {
+	height: 25px;
+}
+
+.tui_bar_message {
+	position: absolute;
+	left: 7px;
+	bottom: 7px;
+}
+
+.tui_bar_right {
+	float: right;
+}
+
+.tui_bar_separator {
+	float: left;
+	height: 18px;
+	border-left: 1px solid #9AC6FF;
+	border-right: 1px solid white;
+	margin: 2px;
+}
+
+.tui_bar_separator-right {
+	height: 18px;
+	border-left: 1px solid #9AC6FF;
+	border-right: 1px solid white;
+	margin: 2px;
+	float: right;
+}
+
+.tui_bar_button {
+	width: 22px;
+	height: 22px;
+	border: 0px;
+	padding-top: 3px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.tui_bar_button span {
+	width: 16px;
+	height: 16px;
+	display: block;
+	margin-left: 2px;
+	margin-top: 2px;
+	float: left;
+	overflow: hidden;
+}
+
+.tui_bar_btnload span {
+	background: url(../images/dataGrid/icon-load.gif) no-repeat;
+	background-position: 0px 0px;
+}
+
+.tui_bar_btnloading span {
+	background: url(../images/dataGrid/icon-loading.gif) no-repeat;
+	background-position: 0px 0px;
+}
+
+.tui_bar_button .l-disabled {
+	background-position: 0px -16px;
+}
+
+.tui_bar_text {
+	line-height: 20px;
+}
+
+
+/*
+    grouping
+*/
+
+.tui_gird .tui_gird_grouprow {
+	border-right: 1px solid #A3C0E8
+}
+
+.tui_gird .tui_gird_grouprow-cell {
+	padding: 6px;
+	border-bottom: 1px solid #A3C0E8;
+	background: #EAF3FF;
+}
+
+.tui_gird .tui_gird_group-togglebtn {
+	background: url(../images/dataGrid/grid-detail-open.gif) no-repeat center;
+	cursor: pointer
+}
+
+.tui_gird .tui_gird_group-togglebtn-close {
+	background: url(../images/dataGrid/grid-detail-close.gif) no-repeat center;
+}
+
+.tui_gird .tui_gird_totalsummary-group td {
+	background-color: #eeeeee;
+	border-color: #eeeeee;
+}
+
+
+/*
+    foot total
+*/
+
+.tui_panetui_bar_total {
+	background: #F5F9FF;
+	padding: 8px;
+	border-top: 1px solid #84A0C4;
+}
+
+
+/*
+    tree grid 
+*/
+
+.tui_gird_tree-space {
+	width: 18px;
+	height: 35px;
+	line-height: 35px;
+	overflow: hidden;
+	float: left;
+}
+
+.tui_gird_tree-link-open {
+	cursor: pointer;
+	background: url(../images/dataGrid/grid-tree-open.gif) no-repeat center;
+}
+
+.tui_gird_tree-link-close {
+	cursor: pointer;
+	background: url(../images/dataGrid/grid-tree-close.gif) no-repeat center;
+}
+
+.tui_gird_tree-link-loading {
+	background-image: url(../../images/loading/ajax-loader.gif)!important;
+}
+
+
+/*
+    锁定部分
+*/
+
+.tui_gird1 {
+	display: none;
+}
+
+.tui_gird1 .tui_gird_body {
+	overflow: hidden;
+}
+
+.tui_gird1 .tui_gird_detailpanel {
+	border-right: 1px solid white;
+}
+
+.tui_frozen .tui_gird2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.tui_frozen .tui_gird2 .tui_gird_body {
+	overflow-x: auto;
+}
+
+.tui_frozen .tui_gird1 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: block;
+}
+
+.tui_gird_gray {
+	border-top: 1px solid #DDDDDD;
+}
+
+.tui_gird_gray .tui_gird_header {
+	border-bottom: 1px solid #DDDDDD;
+	background: #E2F0FF url(../images/dataGrid/header2-bg.jpg) repeat-x left bottom;
+}
+
+.tui_gird_gray .tui_gird_hd-cell {
+	border-right: 1px solid #DDDDDD;
+}
+
+.tui_gird_gray .tui_gird_row-cell {
+	border-bottom: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+}
+
+
+/*
+    菜单条
+*/
+
+.l-menubar {
+	background: url(../images/dataGrid/panel-menu.gif) repeat-x;
+	height: 24px;
+	border: 1px solid #ADBED6;
+	border-top: 1px solid #EFF7F7;
+}
+
+.l-menubar-item {
+	float: left;
+	margin-left: 6px;
+}
+
+.l-menubar-item-down {
+	width: 7px;
+	height: 4px;
+	line-height: 4px;
+	background: url(../images/dataGrid/panel-menu-item-down.gif) no-repeat center;
+	position: absolute;
+	right: 4px;
+	top: 9px;
+	top: 9px\9;
+	_top: 4px;
+}
+
+.l-menubar-item-over {}
+
+
+/*
+
+    搜索栏
+*/
+
+.tui_panel-search {
+	height: 28px;
+	padding-top: 3px;
+	padding-left: 3px;
+	border-left: 1px solid #99BBE8;
+	border-right: 1px solid #99BBE8;
+}
+
+.tui_panel-search-item {
+	float: left;
+	margin-left: 5px;
+}
+
+
+/*
+    编辑
+*/
+
+.tui_gird_row-cell-editing-topcell {
+	border-bottom-color: #CC8F81;
+}
+
+.tui_gird_row-cell-editing-leftcell {
+	border-right-color: #CC8F81;
+}
+
+.tui_gird_row-cell-editing {
+	border-color: #CC8F81;
+}
+
+.tui_gird_row-cell .l-text,
+.tui_gird_editor .l-text {
+	border: 0px;
+	border: none;
+}
+
+.tui_gird_detailpanel-edit {
+	padding-top: 7px;
+	padding-bottom: 3px;
+	background-color: #f7f7f7;
+}
+
+.tui_gird_detailpanel .l-editbox {
+	float: left;
+	margin: 2px;
+	margin-left: 6px;
+	margin-right: 10px;
+}
+
+.tui_gird_detailpanel .l-button {
+	float: left;
+	margin: 2px;
+	margin-left: 4px;
+	margin-right: 6px;
+}
+
+.tui_gird_detailpanel .l-clear {
+	clear: both;
+}
+
+
+/*行序号背景色*/
+
+.tui_gird_row-alt .tui_gird_row-cell-rownumbers,
+.l-selected .tui_gird_row-cell-rownumbers,
+.tui_gird_row-over .tui_gird_row-cell-rownumbers,
+.tui_gird_row-cell-rownumbers {
+	background: #f1f1f1;
+}
+
+
+/*右键菜单*/
+
+.l-menu {
+	border: 1px solid #979797;
+	background: #F5F5F5;
+	position: absolute;
+	overflow: hidden;
+	padding-bottom: 2px;
+	z-index: 1001;
+	font-size: 12px;
+}
+
+.tui_menu_shadow {
+	z-index: 1000;
+	FILTER: progid: DXImageTransform.Microsoft.Blur(pixelRadius=2, MakeShadow=false, ShadowOpacity=0.2);
+	BACKGROUND: #ddd;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+	position: absolute;
+}
+
+.tui_menu_inner {
+	position: relative;
+	width: 100%;
+	z-index: 103;
+}
+
+.tui_menu_over {
+	position: absolute;
+	top: -24px;
+	left: 2px;
+	z-index: 102;
+	height: 22px;
+	overflow: hidden;
+	background: url('dataGrid/menu-item-over-m.gif') repeat-x;
+	width: 97%;
+}
+
+.tui_menu_yline {
+	background: url('dataGrid/menu-line-y.gif') repeat-y;
+	width: 2px;
+	height: 2000px;
+	position: absolute;
+	left: 28px;
+	top: 1px;
+	z-index: 101;
+}
+
+.tui_menu_over-l {
+	background: url('dataGrid/menu-item-over-l.gif') no-repeat;
+	width: 28px;
+	height: 22px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.tui_menu_over-r {
+	background: url('dataGrid/menu-item-over-r.gif') no-repeat;
+	width: 3px;
+	height: 22px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.tui_menu_item {
+	position: relative;
+	height: 23px;
+	line-height: 23px;
+	width: 100%;
+	cursor: pointer;
+}
+
+.tui_menu_item-line {
+	background: url('dataGrid/menu-line-x.gif') repeat-x;
+	height: 2px;
+	width: 100%;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	margin-left: 30px;
+	line-height: 2px;
+	overflow: hidden;
+}
+
+.tui_menu_item-arrow {
+	background: url('dataGrid/menu-item-arrow.gif') no-repeat;
+	position: absolute;
+	top: 8px;
+	right: 9px;
+	width: 4px;
+	height: 7px;
+}
+
+.tui_menu_item-text {
+	color: #000000;
+	left: 33px;
+	position: absolute;
+	top: 0;
+}
+
+.tui_menu_item-icon {
+	left: 3px;
+	top: 0;
+	position: absolute;
+	width: 25px;
+	height: 22px;
+	overflow: hidden;
+}
+
+.tui_menu_item-color {
+	border: 1px solid #cccccc;
+	left: 6px;
+	top: 3px;
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+}
+
+.tui_menu_item-disable {
+	cursor: default;
+}
+
+.tui_menu_item-disable .tui_menu_item-text {
+	color: #A1A1A1;
+}
+
+.tui_gird_body-table .warn {
+	background: #f2dede;
+}
+
+.warn.tui_gird_row-over .tui_gird_row-cell {
+	background: #f2dede;
+	/*鼠标移入后背景色*/
+}
+
+
+/*跨列附加行*/
+
+.l-grid-row-cell-appendRow {
+	border-bottom: 1px solid #cdc9c3;
+	height: 34px;
+}
+
+
+/*DataGrid*/

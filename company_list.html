@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>企业列表</title>
+		<link rel="stylesheet" type="text/css" href="libs/css/basic.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="libs/js/framework.js"></script>
+
+		<script type="text/javascript" src="libs/js/form/tui_date/WdatePicker.js"></script>
+		<script type="text/javascript" src="libs/js/nav/tui_page.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+
+				//page
+				laypage({
+					cont: document.getElementById('page'), //容器。值支持id名、原生dom对象，jquery对象
+					skin: '#3399ff',
+					pages: 66, //总页数
+					curr: 6, //初始化当前页
+					skip: true,
+					jump: function(e) {} //触发分页后的回调
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="wrap cl">
+			<!--left content-->
+			<div class="left_menu f_l">
+				<ul class="menu_list">
+					<li class="left_con">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">展开/收起</a>
+						</div>
+					</li>
+					<li class="company_list current">
+						<a href="company_list.html"></a>
+						<div>
+							<a href="company_list.html">企业列表</a>
+						</div>
+					</li>
+					<li class="order_management">
+						<a href="order_list.html"></a>
+						<div>
+							<a href="order_list.html">订单管理</a>
+						</div>
+					</li>
+					<li class="evaluation_results">
+						<a href="evaluation_list.html"></a>
+						<div>
+							<a href="evaluation_list.html">测评结果</a>
+						</div>
+					</li>
+					<li class="user_management">
+						<a href="operation_user_list.html"></a>
+						<div>
+							<a href="operation_user_list.html">用户管理</a>
+						</div>
+					</li>
+					<li class="send_mail">
+						<a href="send_mail.html"></a>
+						<div>
+							<a href="send_mail.html">发送邮件</a>
+						</div>
+					</li>
+					<li class="account_authority">
+						<a href="account_infos.html"></a>
+						<div>
+							<a href="account_infos.html">账号与权限</a>
+						</div>
+					</li>
+				</ul>
+                <ul class="menu_list_open">
+                    <li class="left_con">
+						<a href="javascript:void(0)"></a>
+					</li>
+					<li class="company_list current">
+						<a href="company_list.html">企业列表</a>
+					</li>
+					<li class="order_management">
+						<a href="order_list.html">订单管理</a>
+					</li>
+					<li class="evaluation_results">
+						<a href="evaluation_list.html">测评结果</a>
+					</li>
+					<li class="user_management">
+						<a href="operation_user_list.html">用户管理</a>
+					</li>
+					<li class="send_mail">
+						<a href="send_mail.html">发送邮件</a>
+					</li>
+					<li class="account_authority">
+						<a href="account_infos.html">账号与权限</a>
+					</li>
+                </ul>
+			</div>
+			<!--right content-->
+			<div class="right">
+				<!--right header-->
+				<div class="right_header">
+					<div class="header_title"><img src="images/logo.png" alt="" /></div>
+					<ul class="header_info f_r cl">
+						<li class="approve_serve">
+							<a href="javascript:void(0)">支持与服务</a>
+						</li>
+						<li class="user_info">
+							<a href="javascript:void(0)"><img src="images/user_img.jpg" alt="" /></a>
+							<div class="dropdown">
+								<div class="triangle"></div>
+								<div class="info_list">
+									<ul>
+										<li>上海颀讯智能科技有限公司</li>
+										<li>方林</li>
+										<li>admin</li>
+										<li>15156282006</li>
+									</ul>
+									<div class="exit">
+										<a href="javascript:void(0)">退 出</a>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+
+				<!--Bread crumb navigation-->
+				<div class="bread_nav">
+					<a href="javascript:void(0)">企业管理</a>
+					<span class="split">/</span>
+					<a href="javascript:void(0)">企业列表</a>
+				</div>
+
+				<div class="right_main">
+					<div class="right_content company_list_right">
+						<div class="title_container cl">
+							<span class="info f_l">企业列表</span>
+							<div class="f_r">
+								<a href="add_company.html" class="btn btn_add"></a>
+								<a href="javascript:void(0)" class="btn btn_export"></a>
+							</div>
+						</div>
+						<!--search conditions-->
+						<div class="search_condition">
+							<div class="search cl">
+								<div class="label f_l">搜索</div>
+								<div class="search_infos f_l cl">
+									<div class="model-select-box nobd">
+										<div class="model-select-text" data-value="">企业名称</div>
+										<ul class="model-select-option">
+											<li data-option="1" class="selected">企业名称</li>
+											<li data-option="2">联系人姓名</li>
+										</ul>
+									</div>
+									<input class="input_search" type="text" />
+									<i class="icon_search"></i>
+								</div>
+							</div>
+							<div class="screen cl">
+								<div class="label f_l">筛选</div>
+								<div class="screen_infos">
+									<div class="model-select-box">
+										<div class="model-select-text" data-value="">所在地</div>
+										<ul class="model-select-option">
+											<li data-option="1">江苏省</li>
+											<li data-option="2">安徽省</li>
+										</ul>
+									</div>
+								</div>
+								<div class="screen_infos">
+									<div class="model-select-box">
+										<div class="model-select-text" data-value="">企业性质</div>
+										<ul class="model-select-option">
+											<li data-option="1">国企</li>
+											<li data-option="2">私营</li>
+										</ul>
+									</div>
+								</div>
+								<div class="screen_infos">
+									<div class="model-select-box">
+										<div class="model-select-text" data-value="">企业类型</div>
+										<ul class="model-select-option">
+											<li data-option="1">类型一</li>
+											<li data-option="2">类型二</li>
+										</ul>
+									</div>
+								</div>
+								<div class="screen_infos">
+									<div class="model-select-box">
+										<div class="model-select-text" data-value="">企业规模</div>
+										<ul class="model-select-option">
+											<li data-option="1">100~200人</li>
+											<li data-option="2">200~500人</li>
+										</ul>
+									</div>
+								</div>
+								<div class="screen_infos">
+									<div class="label f_l">创建时间:</div>
+									<input class="tui_datepicker input_text start_date" onclick="WdatePicker({onpicked:function(){dateSelected()},oncleared:function(){dateSelected()}})" placeholder="年/月/日" type="text"> 至
+									<input class="tui_datepicker input_text end_date" onclick="WdatePicker({onpicked:function(){dateSelected()},oncleared:function(){dateSelected()}})" placeholder="年/月/日" type="text">
+								</div>
+								<div class="screen_infos">
+									<a class="btn btn_screen" href="javascript:void(0)"></a>
+								</div>
+							</div>
+						</div>
+						<table class="table table_border table_striped table_hover table_fixed">
+							<tr>
+								<th width="60">序号</th>
+								<th width="20%">企业名称</th>
+								<th width="10%">联系人姓名</th>
+								<th width="15%">编号</th>
+								<th width="10%">所在地</th>
+								<th width="10%">企业性质</th>
+								<th width="10%">企业类型</th>
+								<th width="10%">企业规模</th>
+								<th>创建时间<i class="icon_sort"></i></th>
+							</tr>
+							<tr onclick="window.location = 'company_details.html'">
+								<td>1</td>
+								<td>上海颀讯智能科技有限公司上海颀讯智能科技有限公司上海颀讯智能科技有限公司</td>
+								<td>张斌</td>
+								<td>QY20081212</td>
+								<td>上海</td>
+								<td>国有企业</td>
+								<td>制造业</td>
+								<td>5000人以上</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr onclick="window.location = 'company_details.html'">
+								<td>2</td>
+								<td>上海颀讯智能科技有限公司</td>
+								<td>张斌</td>
+								<td>QY20081212</td>
+								<td>上海</td>
+								<td>国有企业</td>
+								<td>制造业</td>
+								<td>5000人以上</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr onclick="window.location = 'company_details.html'">
+								<td>3</td>
+								<td>上海颀讯智能科技有限公司</td>
+								<td>张斌</td>
+								<td>QY20081212</td>
+								<td>上海</td>
+								<td>国有企业</td>
+								<td>制造业</td>
+								<td>5000人以上</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr onclick="window.location = 'company_details.html'">
+								<td>4</td>
+								<td>上海颀讯智能科技有限公司</td>
+								<td>张斌</td>
+								<td>QY20081212</td>
+								<td>上海</td>
+								<td>国有企业</td>
+								<td>制造业</td>
+								<td>5000人以上</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr onclick="window.location = 'company_details.html'">
+								<td>5</td>
+								<td>上海颀讯智能科技有限公司</td>
+								<td>张斌</td>
+								<td>QY20081212</td>
+								<td>上海</td>
+								<td>国有企业</td>
+								<td>制造业</td>
+								<td>5000人以上</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr onclick="window.location = 'company_details.html'">
+								<td>6</td>
+								<td>上海颀讯智能科技有限公司</td>
+								<td>张斌</td>
+								<td>QY20081212</td>
+								<td>上海</td>
+								<td>国有企业</td>
+								<td>制造业</td>
+								<td>5000人以上</td>
+								<td>2018-09-06</td>
+							</tr>
+							<tr onclick="window.location = 'company_details.html'">
+								<td>7</td>
+								<td>上海颀讯智能科技有限公司</td>
+								<td>张斌</td>
+								<td>QY20081212</td>
+								<td>上海</td>
+								<td>国有企业</td>
+								<td>制造业</td>
+								<td>5000人以上</td>
+								<td>2018-09-06</td>
+							</tr>
+						</table>
+
+						<div class="footer cl">
+							<div id="page" class="f_r"></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>

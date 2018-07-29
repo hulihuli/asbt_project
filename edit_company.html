@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>企业编辑</title>
+		<link rel="stylesheet" type="text/css" href="libs/css/basic.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="libs/js/framework.js"></script>
+
+		<script type="text/javascript" src="libs/js/form/tui_date/WdatePicker.js"></script>
+		<script type="text/javascript" src="libs/js/nav/tui_page.js"></script>
+
+		<script type="text/javascript" src="js/main.js"></script>
+		<!--表单验证-->
+		<script type="text/javascript" src="libs/js/form/Validform_v5.3.2.js"></script>
+		<!--表单验证结束-->
+
+
+		<script type="text/javascript">
+			$(function(){
+				//表单验证
+				$("#demoform2").Validform({
+				 	tiptype:2
+				});
+			})
+		</script>
+	</head>
+
+	<body>
+		<div class="wrap cl">
+			<!--left content-->
+			<div class="left_menu f_l">
+				<ul class="menu_list">
+					<li class="left_con">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">展开/收起</a>
+						</div>
+					</li>
+					<li class="company_list current">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">企业列表</a>
+						</div>
+					</li>
+					<li class="order_management">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">订单管理</a>
+						</div>
+					</li>
+					<li class="evaluation_results">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">测评结果</a>
+						</div>
+					</li>
+					<li class="user_management">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">用户管理</a>
+						</div>
+					</li>
+					<li class="send_mail">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">发送邮件</a>
+						</div>
+					</li>
+					<li class="account_authority">
+						<a href="javascript:void(0)"></a>
+						<div>
+							<a href="javascript:void(0)">账号与权限</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!--right content-->
+			<div class="right">
+				<!--right header-->
+				<div class="right_header">
+					<div class="header_title"><img src="images/logo.png" alt="" /></div>
+					<ul class="header_info f_r cl">
+						<li class="approve_serve">
+							<a href="javascript:void(0)">支持与服务</a>
+						</li>
+						<li class="user_info">
+							<a href="javascript:void(0)"><img src="images/user_img.jpg" alt="" /></a>
+							<div class="dropdown">
+								<div class="triangle"></div>
+								<div class="info_list">
+									<ul>
+										<li>上海颀讯智能科技有限公司</li>
+										<li>方林</li>
+										<li>admin</li>
+										<li>15156282006</li>
+									</ul>
+									<div class="exit">
+										<a href="javascript:void(0)">退 出</a>
+									</div>
+								</div>
+							</div>
+
+						</li>
+					</ul>
+				</div>
+
+				<!--Bread crumb navigation-->
+				<div class="bread_nav">
+					<a href="javascript:void(0)">企业管理</a>
+					<span class="split">/</span>
+					<a href="javascript:void(0)">企业编辑</a>
+				</div>
+
+				<div class="right_main">
+					<div class="right_content add_company_right">
+						<form action="" class="form form_horizontal add_form" id="demoform2">
+							<table class="table table_input">
+								<tbody>
+									<tr>
+										<td width="10%">企业名称：</td>
+										<td width="40%">
+											<input class="input_text" type="text" value="上海颀讯智能科技有限公司">
+										</td>
+										<td width="10%">企业性质：</td>
+										<td>
+											<div class="model-select-box">
+												<div class="model-select-text" data-value="">请选择企业性质</div>
+												<ul class="model-select-option">
+													<li data-option="1"  class="selected">性质一</li>
+													<li data-option="2">性质二</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>企业简称：</td>
+										<td>
+											<input class="input_text" type="text" value="颀讯智能">
+										</td>
+										<td>行业类型：</td>
+										<td>
+											<div class="model-select-box">
+												<div class="model-select-text" data-value="">请选择行业类型</div>
+												<ul class="model-select-option">
+													<li data-option="1"  class="selected">类型一</li>
+													<li data-option="2">类型二</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="necessary">*</span>联系人姓名：</td>
+										<td>
+											<div class="formControls">
+												<input class="input_text" type="text" datatype="*" nullmsg="请输入联系人姓名" value="张琳">
+											</div>
+											<div><span class="Validform_checktip"></span></div>
+										</td>
+										<td>企业地址：</td>
+										<td>
+											<div class="model-select-box">
+												<div class="model-select-text" data-value="">请选择省市</div>
+												<ul class="model-select-option">
+													<li data-option="1"  class="selected">安徽省池州市</li>
+													<li data-option="2">安徽省合肥市</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td><span class="necessary">*</span>联系人电话：</td>
+										<td>
+											<div>（请选择下面一种）</div>
+										</td>
+										<td></td>
+										<td>
+											<input class="input_text" type="text" value="贵池区梅龙镇">
+										</td>
+									</tr>
+									<tr>
+										<td>手机号：</td>
+										<td>
+											<input class="input_text" type="text" value="15122222222">
+										</td>
+										<td>企业规模：</td>
+										<td>
+											<div class="model-select-box">
+												<div class="model-select-text" data-value="">请选择企业规模</div>
+												<ul class="model-select-option">
+													<li data-option="1" class="selected">100~500人</li>
+													<li data-option="2">500~1000人</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td>座机号：</td>
+										<td class="phone_number">
+											<input class="input_text" type="text">
+											<span>-</span>
+											<input class="input_text" type="text">
+										</td>
+										<td>联系人邮箱：</td>
+										<td>
+											<input class="input_text" type="text" value="15484@qq.com">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="spacehold"></div>
+							<div class="fixed-btn align_center">
+								<a href="###" class="btn btn_save disable">保存</a>
+								<a href="###" class="btn btn_cancel">下一步</a>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+</html>
